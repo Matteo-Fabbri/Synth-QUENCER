@@ -43,56 +43,57 @@ class ViewController: UIViewController {
 
     // Here I'm connecting each key's touch down events to MIDI Note On via a unique method
     // Each UIButton (key) has a different tag
+    // MIDI message will be get from the OscillatorBanks as information about the notes to be played
     @IBAction func didPressKey(_ sender: UIButton) {
         if sender.tag==0 {
             print("C (down) Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(60), velocity: MIDIVelocity(120))
         }
-        if sender.tag==1 {
+        else if sender.tag==1 {
             print("C# Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(61), velocity: MIDIVelocity(120))
         }
-        if sender.tag==2 {
+        else if sender.tag==2 {
             print("D Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(62), velocity: MIDIVelocity(120))
         }
-        if sender.tag==3 {
+        else if sender.tag==3 {
             print("D# Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(63), velocity: MIDIVelocity(120))
         }
-        if sender.tag==4 {
+        else if sender.tag==4 {
             print("E Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(64), velocity: MIDIVelocity(120))
         }
-        if sender.tag==5 {
+        else if sender.tag==5 {
             print("F Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(65), velocity: MIDIVelocity(120))
         }
-        if sender.tag==6 {
+        else if sender.tag==6 {
             print("F# Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(66), velocity: MIDIVelocity(120))
         }
-        if sender.tag==7 {
+        else if sender.tag==7 {
             print("G Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(67), velocity: MIDIVelocity(120))
         }
-        if sender.tag==8 {
+        else if sender.tag==8 {
             print("G# Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(68), velocity: MIDIVelocity(120))
         }
-        if sender.tag==9 {
+        else if sender.tag==9 {
             print("A Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(69), velocity: MIDIVelocity(120))
         }
-        if sender.tag==10 {
+        else if sender.tag==10 {
             print("A# Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(70), velocity: MIDIVelocity(120))
         }
-        if sender.tag==11 {
+        else if sender.tag==11 {
             print("B Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(71), velocity: MIDIVelocity(120))
         }
-        if sender.tag==12 {
+        else if sender.tag==12 {
             print("C (up) Key pressed")
             oscillator1.play(noteNumber: MIDINoteNumber(72), velocity: MIDIVelocity(120))
         }
@@ -106,51 +107,51 @@ class ViewController: UIViewController {
             print("C (down) key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(60))
         }
-        if sender.tag==1 {
+        else if sender.tag==1 {
             print("C# Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(61))
         }
-        if sender.tag==2 {
+        else if sender.tag==2 {
             print("D Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(62))
         }
-        if sender.tag==3 {
+        else if sender.tag==3 {
             print("D# Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(63))
         }
-        if sender.tag==4 {
+        else if sender.tag==4 {
             print("E Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(64))
         }
-        if sender.tag==5 {
+        else if sender.tag==5 {
             print("F Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(65))
         }
-        if sender.tag==6 {
+        else if sender.tag==6 {
             print("F# Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(66))
         }
-        if sender.tag==7 {
+        else if sender.tag==7 {
             print("G Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(67))
         }
-        if sender.tag==8 {
+        else if sender.tag==8 {
             print("G# Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(68))
         }
-        if sender.tag==9 {
+        else if sender.tag==9 {
             print("A Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(69))
         }
-        if sender.tag==10 {
+        else if sender.tag==10 {
             print("A# Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(70))
         }
-        if sender.tag==11 {
+        else if sender.tag==11 {
             print("B Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(71))
         }
-        if sender.tag==12 {
+        else if sender.tag==12 {
             print("C (up) Key released")
             oscillator1.stop(noteNumber: MIDINoteNumber(72))
         }

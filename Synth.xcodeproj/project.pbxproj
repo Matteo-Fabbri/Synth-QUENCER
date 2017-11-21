@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850461771FBF326400F1DE24 /* Velocities.m in Sources */ = {isa = PBXBuildFile; fileRef = 850461751FBF326400F1DE24 /* Velocities.m */; };
+		850461781FBF326400F1DE24 /* Velocities.xib in Resources */ = {isa = PBXBuildFile; fileRef = 850461761FBF326400F1DE24 /* Velocities.xib */; };
 		852033BF1FBCE0A900EF2859 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852033BE1FBCE0A900EF2859 /* AppDelegate.swift */; };
 		852033C11FBCE0A900EF2859 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852033C01FBCE0A900EF2859 /* ViewController.swift */; };
 		852033C41FBCE0A900EF2859 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852033C21FBCE0A900EF2859 /* Main.storyboard */; };
@@ -18,6 +20,7 @@
 		852033EF1FBCE0D900EF2859 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 852033EC1FBCE0D900EF2859 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		852033F01FBCE0D900EF2859 /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852033ED1FBCE0D900EF2859 /* AudioKitUI.framework */; };
 		852033F11FBCE0D900EF2859 /* AudioKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 852033ED1FBCE0D900EF2859 /* AudioKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		853732C61FC0E67200264FDB /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 853732C51FC0E67200264FDB /* Data.m */; };
 		854F3D5F1FBDD4190085E604 /* cymbals1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 854F3D3B1FBDD4190085E604 /* cymbals1.wav */; };
 		854F3D601FBDD4190085E604 /* cymbals2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 854F3D3C1FBDD4190085E604 /* cymbals2.wav */; };
 		854F3D611FBDD4190085E604 /* cymbals3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 854F3D3D1FBDD4190085E604 /* cymbals3.wav */; };
@@ -54,6 +57,8 @@
 		854F3D801FBDD4190085E604 /* tom4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 854F3D5C1FBDD4190085E604 /* tom4.wav */; };
 		854F3D811FBDD4190085E604 /* tom5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 854F3D5D1FBDD4190085E604 /* tom5.wav */; };
 		854F3D821FBDD4190085E604 /* tom6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 854F3D5E1FBDD4190085E604 /* tom6.wav */; };
+		856615AC1FBEF9BE008BB5C5 /* Drum sounds and reverb.m in Sources */ = {isa = PBXBuildFile; fileRef = 856615AA1FBEF9BE008BB5C5 /* Drum sounds and reverb.m */; };
+		856615AD1FBEF9BE008BB5C5 /* Drum sounds and reverb.xib in Resources */ = {isa = PBXBuildFile; fileRef = 856615AB1FBEF9BE008BB5C5 /* Drum sounds and reverb.xib */; };
 		858AB7ED1FBDB48A00280332 /* Sequencer.m in Sources */ = {isa = PBXBuildFile; fileRef = 858AB7EB1FBDB48A00280332 /* Sequencer.m */; };
 		858AB7EE1FBDB48A00280332 /* Sequencer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 858AB7EC1FBDB48A00280332 /* Sequencer.xib */; };
 /* End PBXBuildFile section */
@@ -91,6 +96,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		850461741FBF326400F1DE24 /* Velocities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Velocities.h; sourceTree = "<group>"; };
+		850461751FBF326400F1DE24 /* Velocities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Velocities.m; sourceTree = "<group>"; };
+		850461761FBF326400F1DE24 /* Velocities.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Velocities.xib; sourceTree = "<group>"; };
 		852033BB1FBCE0A900EF2859 /* Synth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852033BE1FBCE0A900EF2859 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		852033C01FBCE0A900EF2859 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +114,8 @@
 		852033E01FBCE0A900EF2859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		852033EC1FBCE0D900EF2859 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		852033ED1FBCE0D900EF2859 /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKitUI.framework; sourceTree = "<group>"; };
+		853732C41FC0E67200264FDB /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		853732C51FC0E67200264FDB /* Data.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 		854F3D3B1FBDD4190085E604 /* cymbals1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cymbals1.wav; sourceTree = "<group>"; };
 		854F3D3C1FBDD4190085E604 /* cymbals2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cymbals2.wav; sourceTree = "<group>"; };
 		854F3D3D1FBDD4190085E604 /* cymbals3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cymbals3.wav; sourceTree = "<group>"; };
@@ -142,6 +152,9 @@
 		854F3D5C1FBDD4190085E604 /* tom4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tom4.wav; sourceTree = "<group>"; };
 		854F3D5D1FBDD4190085E604 /* tom5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tom5.wav; sourceTree = "<group>"; };
 		854F3D5E1FBDD4190085E604 /* tom6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tom6.wav; sourceTree = "<group>"; };
+		856615A91FBEF9BE008BB5C5 /* Drum sounds and reverb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Drum sounds and reverb.h"; sourceTree = "<group>"; };
+		856615AA1FBEF9BE008BB5C5 /* Drum sounds and reverb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Drum sounds and reverb.m"; sourceTree = "<group>"; };
+		856615AB1FBEF9BE008BB5C5 /* Drum sounds and reverb.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Drum sounds and reverb.xib"; sourceTree = "<group>"; };
 		858AB7EA1FBDB48A00280332 /* Sequencer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sequencer.h; sourceTree = "<group>"; };
 		858AB7EB1FBDB48A00280332 /* Sequencer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sequencer.m; sourceTree = "<group>"; };
 		858AB7EC1FBDB48A00280332 /* Sequencer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sequencer.xib; sourceTree = "<group>"; };
@@ -208,6 +221,14 @@
 				858AB7EA1FBDB48A00280332 /* Sequencer.h */,
 				858AB7EB1FBDB48A00280332 /* Sequencer.m */,
 				858AB7EC1FBDB48A00280332 /* Sequencer.xib */,
+				856615A91FBEF9BE008BB5C5 /* Drum sounds and reverb.h */,
+				856615AA1FBEF9BE008BB5C5 /* Drum sounds and reverb.m */,
+				856615AB1FBEF9BE008BB5C5 /* Drum sounds and reverb.xib */,
+				850461741FBF326400F1DE24 /* Velocities.h */,
+				850461751FBF326400F1DE24 /* Velocities.m */,
+				850461761FBF326400F1DE24 /* Velocities.xib */,
+				853732C41FC0E67200264FDB /* Data.h */,
+				853732C51FC0E67200264FDB /* Data.m */,
 				854F3D3A1FBDD4190085E604 /* Drum samples */,
 			);
 			path = Synth;
@@ -397,6 +418,7 @@
 				852033C91FBCE0A900EF2859 /* LaunchScreen.storyboard in Resources */,
 				854F3D801FBDD4190085E604 /* tom4.wav in Resources */,
 				854F3D681FBDD4190085E604 /* hi-hat4.wav in Resources */,
+				850461781FBF326400F1DE24 /* Velocities.xib in Resources */,
 				854F3D7F1FBDD4190085E604 /* tom3.wav in Resources */,
 				854F3D751FBDD4190085E604 /* noiseclick5.wav in Resources */,
 				854F3D731FBDD4190085E604 /* noiseclick3.wav in Resources */,
@@ -411,6 +433,7 @@
 				854F3D7B1FBDD4190085E604 /* snare5.wav in Resources */,
 				854F3D651FBDD4190085E604 /* hi-hat1.wav in Resources */,
 				854F3D7A1FBDD4190085E604 /* snare4.wav in Resources */,
+				856615AD1FBEF9BE008BB5C5 /* Drum sounds and reverb.xib in Resources */,
 				852033C41FBCE0A900EF2859 /* Main.storyboard in Resources */,
 				854F3D701FBDD4190085E604 /* kick6.wav in Resources */,
 				854F3D6C1FBDD4190085E604 /* kick2.wav in Resources */,
@@ -447,9 +470,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856615AC1FBEF9BE008BB5C5 /* Drum sounds and reverb.m in Sources */,
 				852033C11FBCE0A900EF2859 /* ViewController.swift in Sources */,
 				858AB7ED1FBDB48A00280332 /* Sequencer.m in Sources */,
+				850461771FBF326400F1DE24 /* Velocities.m in Sources */,
 				852033BF1FBCE0A900EF2859 /* AppDelegate.swift in Sources */,
+				853732C61FC0E67200264FDB /* Data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

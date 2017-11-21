@@ -20,8 +20,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="R96-1n-ERF"/>
-                        <segue destination="pya-N6-EPb" kind="relationship" relationship="viewControllers" id="fYO-kT-v4Q"/>
+                        <segue destination="pya-N6-EPb" kind="relationship" relationship="viewControllers" id="RBR-TG-fkz"/>
+                        <segue destination="fXf-Zx-ik6" kind="relationship" relationship="viewControllers" id="Lay-qn-Cye"/>
+                        <segue destination="vAe-do-XvA" kind="relationship" relationship="viewControllers" id="3xu-hT-iJ2"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="SWF-GU-5nP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jwl-KV-qiu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -426,6 +428,89 @@
             <point key="canvasLocation" x="-394" y="825"/>
         </scene>
         <!--Item-->
+        <scene sceneID="tM7-yy-IVT">
+            <objects>
+                <viewController id="vAe-do-XvA" customClass="Drum_sounds_and_reverb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vqH-gH-Ecf">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eey-iF-dEd">
+                                <rect key="frame" x="106" y="74" width="541" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose pan and sounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApJ-QW-iQx">
+                                <rect key="frame" x="241" y="20" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-100" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="age-mW-YU6">
+                                <rect key="frame" x="0.0" y="74" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didKickPanSliderChange:" destination="vAe-do-XvA" eventType="valueChanged" id="Akl-f7-eIA"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dNA-1d-Ule"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="w2f-QY-Aw0"/>
+                    <connections>
+                        <outlet property="kickTrackSoundsPicker" destination="eey-iF-dEd" id="ITZ-Uf-Yuf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHC-5P-LwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1211.2443778110946" y="2408.8000000000002"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="qET-vC-Npe">
+            <objects>
+                <viewController id="fXf-Zx-ik6" customClass="Velocities" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vbf-fj-Uoz">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ha-oY-PMu">
+                                <rect key="frame" x="81" y="74" width="541" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIT-xN-K69">
+                                <rect key="frame" x="20" y="81" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose velocities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJQ-3O-NzR">
+                                <rect key="frame" x="241" y="20" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ow-hP-iuO">
+                                <rect key="frame" x="81" y="129" width="541" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lJT-b7-lYR"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="g27-0P-22I"/>
+                    <connections>
+                        <outlet property="kickTrackVelocitiesPicker" destination="0ha-oY-PMu" id="Nmm-wo-bri"/>
+                        <outlet property="snareTrackVelocitiesPicker" destination="5Ow-hP-iuO" id="TBU-To-CQH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALu-49-6JU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1211" y="1607"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="RSd-wL-iXr">
             <objects>
                 <viewController id="pya-N6-EPb" customClass="Sequencer" sceneMemberID="viewController">
@@ -433,28 +518,418 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTv-J1-WwM">
-                                <rect key="frame" x="310" y="172" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpU-d6-rrR">
+                                <rect key="frame" x="111" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.62" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="didPressButton:" destination="pya-N6-EPb" eventType="touchUpInside" id="iDA-Ud-ru5"/>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="dji-zH-421"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGP-rZ-BgJ">
+                                <rect key="frame" x="145" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="GLB-Pj-DhB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfJ-gz-eBP">
+                                <rect key="frame" x="179" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="Rcs-oE-RIV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YB-Cs-Npq">
+                                <rect key="frame" x="213" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="gD5-hi-x2M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zF3-qi-JAX">
+                                <rect key="frame" x="247" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.62" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="IAF-Ca-cZb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7o-8Y-xkl">
+                                <rect key="frame" x="281" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="zUq-1x-Scm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yul-qG-u9n">
+                                <rect key="frame" x="315" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="e6Z-Ke-fQg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47U-i1-uAG">
+                                <rect key="frame" x="349" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="gWz-qt-lEV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYx-YC-LPe">
+                                <rect key="frame" x="383" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.62" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="5qk-zk-hyP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHX-yF-PKj">
+                                <rect key="frame" x="417" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="3iT-8t-scF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bk-DA-XrF">
+                                <rect key="frame" x="451" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="xn4-vh-sBb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="App-tU-8Dj">
+                                <rect key="frame" x="485" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="CWG-A9-Nsl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nde-sj-z7S">
+                                <rect key="frame" x="519" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.62" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="J1v-hb-VhC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNT-da-dXC">
+                                <rect key="frame" x="553" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="GFK-Ef-yS7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3m-aT-xT2">
+                                <rect key="frame" x="587" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="J1Q-05-HQF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hw-Uf-pIA">
+                                <rect key="frame" x="621" y="64" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didKickTrackButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="C7p-jB-w9k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwJ-Bo-neY">
+                                <rect key="frame" x="111" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1"/>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxf-w7-ceg">
+                                <rect key="frame" x="144" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-P1-Tu3">
+                                <rect key="frame" x="178" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vom-zz-Dxx">
+                                <rect key="frame" x="212" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otu-uo-oVy">
+                                <rect key="frame" x="246" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2"/>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucg-zW-Y4r">
+                                <rect key="frame" x="280" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxy-c6-clm">
+                                <rect key="frame" x="314" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWb-np-ods">
+                                <rect key="frame" x="348" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxA-6W-6Ye">
+                                <rect key="frame" x="382" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3"/>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIs-gx-guF">
+                                <rect key="frame" x="416" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEt-ua-2jg">
+                                <rect key="frame" x="450" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgC-XJ-BvY">
+                                <rect key="frame" x="484" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clG-uX-UFT">
+                                <rect key="frame" x="518" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="4"/>
+                            </button>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfH-s4-K77">
+                                <rect key="frame" x="552" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aj5-D2-RX3">
+                                <rect key="frame" x="586" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bY-gY-z2I">
+                                <rect key="frame" x="620" y="135" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa2-U7-7wh">
+                                <rect key="frame" x="300" y="301" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="didPauseButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="nSM-q9-lY0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNz-3Q-Ale">
+                                <rect key="frame" x="350" y="301" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="didStopButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="F72-Py-g32"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGH-h2-Nrc">
+                                <rect key="frame" x="262" y="301" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="didPlayButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="Tmb-05-HzQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2to-UN-Zv7">
+                                <rect key="frame" x="396" y="301" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Loop"/>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="1" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="x7h-pr-YoQ">
+                                <rect key="frame" x="135" y="301" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didBpmSliderTouchUp:" destination="pya-N6-EPb" eventType="touchUpOutside" id="Ozj-Yf-zuD"/>
+                                    <action selector="didBpmSliderTouchUp:" destination="pya-N6-EPb" eventType="touchUpInside" id="bj6-AE-L3W"/>
+                                    <action selector="didBpmSliderValueChange:" destination="pya-N6-EPb" eventType="valueChanged" id="Ztz-xk-8LL"/>
+                                </connections>
+                            </slider>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qDC-Nf-KgR">
+                                <rect key="frame" x="439" y="303" width="52" height="24"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1St-09-mBH">
+                                <rect key="frame" x="513" y="303" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="didClearButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="Ror-7u-m9o"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iaw-zv-8hk">
+                                <rect key="frame" x="557" y="307" width="73" height="23"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obp-eC-dXU">
+                                <rect key="frame" x="55" y="305" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create sequence" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5M-9z-Z1z">
+                                <rect key="frame" x="268" y="11" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIC-9e-KHC">
+                                <rect key="frame" x="30" y="307" width="21" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="didBpmPlusButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="7Xz-wF-Lw4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nke-sS-2q9">
+                                <rect key="frame" x="5" y="307" width="21" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="didBpmMinusButtonPress:" destination="pya-N6-EPb" eventType="touchDown" id="fcN-Mj-Jfy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPe-1w-ev3">
+                                <rect key="frame" x="79" y="70" width="24" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <action selector="didKickShiftToRightPress:" destination="pya-N6-EPb" eventType="touchDown" id="tyH-Q2-iFq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgy-z5-iH1">
+                                <rect key="frame" x="49" y="70" width="24" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="didKickShiftToLeftPress:" destination="pya-N6-EPb" eventType="touchDown" id="fz4-qC-P8t"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5v-Bf-X7t">
+                                <rect key="frame" x="8" y="66" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="DMw-2q-WqQ" firstAttribute="bottom" secondItem="cTv-J1-WwM" secondAttribute="bottom" constant="141" id="a7U-5a-4FM"/>
-                            <constraint firstItem="cTv-J1-WwM" firstAttribute="leading" secondItem="DMw-2q-WqQ" secondAttribute="leading" constant="310" id="aKP-up-dSY"/>
-                            <constraint firstItem="cTv-J1-WwM" firstAttribute="top" secondItem="DMw-2q-WqQ" secondAttribute="top" constant="172" id="b9x-o3-JBH"/>
-                            <constraint firstItem="DMw-2q-WqQ" firstAttribute="trailing" secondItem="cTv-J1-WwM" secondAttribute="trailing" constant="311" id="gdg-3H-Ijk"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DMw-2q-WqQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="2AW-f4-mUz"/>
+                    <connections>
+                        <outlet property="bpmLabel" destination="obp-eC-dXU" id="7oD-ip-czl"/>
+                        <outlet property="kickButton1" destination="zpU-d6-rrR" id="gRe-2p-B6A"/>
+                        <outlet property="kickButton10" destination="aHX-yF-PKj" id="rEW-l3-gkf"/>
+                        <outlet property="kickButton11" destination="6Bk-DA-XrF" id="Fiu-vq-Lo8"/>
+                        <outlet property="kickButton12" destination="App-tU-8Dj" id="0wJ-NL-AqL"/>
+                        <outlet property="kickButton13" destination="nde-sj-z7S" id="x17-S3-OMu"/>
+                        <outlet property="kickButton14" destination="TNT-da-dXC" id="2js-Z5-Xww"/>
+                        <outlet property="kickButton15" destination="Z3m-aT-xT2" id="NwY-9H-R0P"/>
+                        <outlet property="kickButton16" destination="2hw-Uf-pIA" id="xZ8-ic-7AO"/>
+                        <outlet property="kickButton2" destination="RGP-rZ-BgJ" id="Xi6-uu-mf5"/>
+                        <outlet property="kickButton3" destination="GfJ-gz-eBP" id="gOA-gk-Wy9"/>
+                        <outlet property="kickButton4" destination="2YB-Cs-Npq" id="5ad-XE-GA7"/>
+                        <outlet property="kickButton5" destination="zF3-qi-JAX" id="Cn3-et-4qh"/>
+                        <outlet property="kickButton6" destination="o7o-8Y-xkl" id="7uL-5P-UZv"/>
+                        <outlet property="kickButton7" destination="Yul-qG-u9n" id="XOa-hC-RJU"/>
+                        <outlet property="kickButton8" destination="47U-i1-uAG" id="ltZ-L9-6P8"/>
+                        <outlet property="kickButton9" destination="KYx-YC-LPe" id="uSI-Id-32Z"/>
+                        <outlet property="tempoSlider" destination="x7h-pr-YoQ" id="VFr-Us-348"/>
+                        <outletCollection property="kickTrackButtons" destination="zpU-d6-rrR" id="fIY-mR-tR9"/>
+                        <outletCollection property="kickTrackButtons" destination="RGP-rZ-BgJ" id="7q1-ce-skK"/>
+                        <outletCollection property="kickTrackButtons" destination="GfJ-gz-eBP" id="NkU-pQ-fx1"/>
+                        <outletCollection property="kickTrackButtons" destination="2YB-Cs-Npq" id="cQi-Dt-cxd"/>
+                        <outletCollection property="kickTrackButtons" destination="zF3-qi-JAX" id="Qqf-WQ-WcQ"/>
+                        <outletCollection property="kickTrackButtons" destination="o7o-8Y-xkl" id="VYq-zX-dWN"/>
+                        <outletCollection property="kickTrackButtons" destination="Yul-qG-u9n" id="gB2-oz-VPl"/>
+                        <outletCollection property="kickTrackButtons" destination="47U-i1-uAG" id="hzx-XH-Cq3"/>
+                        <outletCollection property="kickTrackButtons" destination="KYx-YC-LPe" id="bgq-fc-VnN"/>
+                        <outletCollection property="kickTrackButtons" destination="aHX-yF-PKj" id="boP-7Z-VPv"/>
+                        <outletCollection property="kickTrackButtons" destination="6Bk-DA-XrF" id="aHT-7u-xdl"/>
+                        <outletCollection property="kickTrackButtons" destination="App-tU-8Dj" id="kVG-UV-vem"/>
+                        <outletCollection property="kickTrackButtons" destination="nde-sj-z7S" id="bVl-nm-T5K"/>
+                        <outletCollection property="kickTrackButtons" destination="TNT-da-dXC" id="CqQ-1Q-CHg"/>
+                        <outletCollection property="kickTrackButtons" destination="Z3m-aT-xT2" id="C1z-Ef-M6Y"/>
+                        <outletCollection property="kickTrackButtons" destination="2hw-Uf-pIA" id="xiB-OC-yRr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JG-9M-9qB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1211" y="826"/>
+            <point key="canvasLocation" x="-1211.2443778110946" y="824.79999999999995"/>
         </scene>
     </scenes>
 </document>
