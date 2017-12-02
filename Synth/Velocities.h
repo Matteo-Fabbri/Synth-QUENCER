@@ -9,10 +9,30 @@
 #import <UIKit/UIKit.h>
 // model
 #import "Data.h"
+#import "Drum sounds and reverb.h"
 
 
 
 @interface Velocities : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
+
+# pragma mark Randomise and Reset hihat
+- (IBAction)didHiHatRandomisePress:(UIButton *)sender;
+
+- (IBAction)didHiHatVelocitiesResetPress:(UIButton *)sender;
+
+
+# pragma mark Randomise and Reset Kick
+- (IBAction)didKickRandomisePress:(UIButton *)sender;
+- (IBAction)didKickVelocitiesResetPress:(UIButton *)sender;
+
+# pragma mark Randomise and Reset Snare
+
+- (IBAction)didSnareRandomisePress:(UIButton *)sender;
+- (IBAction)didSnareVelocitiesResetPress:(UIButton *)sender;
+
+# pragma mark Randomise and Reset Tom
+- (IBAction)didTomRandomisePress:(UIButton *)sender;
+- (IBAction)didTomVelocitiesResetPress:(UIButton *)sender;
 
 
 
@@ -20,7 +40,10 @@
 
 # pragma mark pickerviews outlets
 @property (strong, nonatomic) IBOutlet UIPickerView *kickTrackVelocitiesPicker;
-@property (strong, nonatomic) IBOutlet UIPickerView *snareTrackVelocitiesPicker;
+@property (strong, nonatomic) IBOutlet UIPickerView *hiHatTrackVelocitiesPicker;
+@property (strong, nonatomic) IBOutlet UIPickerView *snareTrackVelocities;
+@property (strong, nonatomic) IBOutlet UIPickerView *tomTrackVelocities;
+
 
 
 

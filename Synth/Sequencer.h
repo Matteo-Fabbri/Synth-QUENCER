@@ -16,9 +16,13 @@
 #import "Drum sounds and reverb.h"
 // Importing the view to set velocities
 #import "Velocities.h"
+// Importing a class to round the buttons' corners
+//stackoverflow.com/questions/5047818/how-to-round-the-corners-of-a-button
+#import <QuartzCore/QuartzCore.h>
 
 
-@interface Sequencer : UIViewController {
+
+@interface Sequencer : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate> {
     
 # pragma mark Arrays for buttons states
     
@@ -28,18 +32,135 @@
     NSInteger snareTrackButtonsStateArray[16];
     NSInteger hihatTrackButtonsStateArray[16];
     NSInteger tomTrackButtonsStateArray[16];
-    NSInteger cymbalTrackButtonsStateArray[16];
-    NSInteger clicknoiseTrackButtonsStateArray[16];
 
+    NSInteger sequenceFirstSample;
+    NSInteger sequenceLastSample;
     
+    NSInteger firstSampleToBeCleared;
+    NSInteger lastSampleToBeCleared;
 }
 
 
+# pragma mark Loop selection buttons properties
+
+@property (strong, nonatomic) IBOutlet UIButton *loopSelectionAButton;
+@property (strong, nonatomic) IBOutlet UIButton *loopSelectionBButton;
+@property (strong, nonatomic) IBOutlet UIButton *loopSelectionCButton;
+@property (strong, nonatomic) IBOutlet UIButton *loopSelectionDButton;
+
+
+
+
+# pragma mark Tom buttons outlet collection
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *tomTrackButtons;
+
+# pragma mark Tom buttons method
+- (IBAction)didTomTrackButtonPress:(UIButton *)sender;
+
+# pragma mark Tom buttons single outlets
+
+@property (strong, nonatomic) IBOutlet UIButton *tomButton1;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton2;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton3;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton4;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton5;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton6;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton7;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton8;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton9;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton10;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton11;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton12;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton13;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton14;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton15;
+@property (strong, nonatomic) IBOutlet UIButton *tomButton16;
+
+# pragma mark Shift and Inv Tom
+- (IBAction)didTomShiftToRightPress:(UIButton *)sender;
+- (IBAction)didTomShiftToLeftPress:(UIButton *)sender;
+- (IBAction)didTomInvertButtonPress:(UIButton *)sender;
+
+
+
+# pragma mark Snare buttons outlet collection
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *snareTrackButtons;
+
+# pragma mark Snare buttons method
+- (IBAction)didSnareTrackButtonPress:(UIButton *)sender;
+
+# pragma mark Snare buttons single outlets
+@property (strong, nonatomic) IBOutlet UIButton *snareButton1;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton2;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton3;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton4;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton5;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton6;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton7;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton8;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton9;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton10;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton11;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton12;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton13;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton14;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton15;
+@property (strong, nonatomic) IBOutlet UIButton *snareButton16;
+
+
+
+# pragma mark Hi-Hat buttons outlet collection
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *hiHatTrackButtons;
+
+# pragma mark Hi-Hat buttons method
+- (IBAction)didHiHatTrackButtonPress:(UIButton *)sender;
+
+
+# pragma mark Hi-Hat buttons single outlets
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton1;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton2;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton3;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton4;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton5;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton6;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton7;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton8;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton9;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton10;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton11;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton12;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton13;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton14;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton15;
+@property (strong, nonatomic) IBOutlet UIButton *hiHatButton16;
+
+
+
+
+
+# pragma mark sharedInstance as property
+// I create this property so that I can initialise some of the values stored in the model
+@property Data *data;
+
+# pragma mark Inverting sequence buttons methods
+- (IBAction)didKickInvertButtonPress:(UIButton *)sender;
+
+
+# pragma mark Sequence length and clear (picker methods)
+
+- (IBAction)didClearButtonPress:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIPickerView *sequenceClearPicker;
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView;
+- (NSInteger)numberOfRowsInComponent:(NSInteger)component;
+- (void)pickerView:(UIPickerView *)pickerView
+      didSelectRow:(NSInteger)row
+       inComponent:(NSInteger)component;
+- (NSString *)pickerView:(UIPickerView *)pickerView
+             titleForRow:(NSInteger)row
+            forComponent:(NSInteger)component;
 
 
 # pragma mark bpm label
-
-
 @property (strong, nonatomic) IBOutlet UILabel *bpmLabel;
 
 
@@ -49,6 +170,11 @@
 // the drum sample (16th of a 4/4 bar, 1/4 of a semiminimum note) currently being played
 @property int sampleNumber;
 @property BOOL isSequencerPlaying;
+
+
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *sampleNumberBeingPlayedIndicators;
+
+
 
 # pragma mark Tracks Buttons IBOutlet Collections and single buttons properties
 // Here I create an outlet collection for each drum sequencer track
@@ -70,6 +196,18 @@
 @property (strong, nonatomic) IBOutlet UIButton *kickButton14;
 @property (strong, nonatomic) IBOutlet UIButton *kickButton15;
 @property (strong, nonatomic) IBOutlet UIButton *kickButton16;
+
+# pragma mark Shift and Inv hi-hat
+
+- (IBAction)didHiHatShiftToRightPress:(UIButton *)sender;
+- (IBAction)didHiHatShiftToLeftPress:(UIButton *)sender;
+- (IBAction)didHiHatInvertButtonPress:(UIButton *)sender;
+
+# pragma mark Shift and Inv snare
+- (IBAction)didSnareShiftToRightPress:(UIButton *)sender;
+- (IBAction)didSnareShiftToLeftPress:(UIButton *)sender;
+- (IBAction)didSnareInvertButtonPress:(UIButton *)sender;
+
 
 # pragma mark Shift kick seq
 
@@ -115,75 +253,16 @@
 
 
 
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample1;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample2;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample3;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample4;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample5;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample6;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample7;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample8;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample9;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample10;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample11;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample12;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample13;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample14;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample15;
-//@property (strong,nonatomic) AVAudioPlayer *kick2PlayerSample16;
+#pragma mark Sections buttons
 
-
-
-
-
-
-@property (strong,nonatomic) AVAudioPlayer *snare1Player;
-@property (strong,nonatomic) AVAudioPlayer *snare2Player;
-@property (strong,nonatomic) AVAudioPlayer *snare3Player;
-@property (strong,nonatomic) AVAudioPlayer *snare4Player;
-@property (strong,nonatomic) AVAudioPlayer *snare5Player;
-@property (strong,nonatomic) AVAudioPlayer *snare6Player;
-
-@property (strong,nonatomic) AVAudioPlayer *hihat1Player;
-@property (strong,nonatomic) AVAudioPlayer *hihat2Player;
-@property (strong,nonatomic) AVAudioPlayer *hihat3Player;
-@property (strong,nonatomic) AVAudioPlayer *hihat4Player;
-@property (strong,nonatomic) AVAudioPlayer *hihat5Player;
-@property (strong,nonatomic) AVAudioPlayer *hihat6Player;
-
-@property (strong,nonatomic) AVAudioPlayer *cymbal1Player;
-@property (strong,nonatomic) AVAudioPlayer *cymbal2Player;
-@property (strong,nonatomic) AVAudioPlayer *cymbal3Player;
-@property (strong,nonatomic) AVAudioPlayer *cymbal4Player;
-@property (strong,nonatomic) AVAudioPlayer *cymbal5Player;
-@property (strong,nonatomic) AVAudioPlayer *cymbal6Player;
-
-@property (strong,nonatomic) AVAudioPlayer *tom1Player;
-@property (strong,nonatomic) AVAudioPlayer *tom2Player;
-@property (strong,nonatomic) AVAudioPlayer *tom3Player;
-@property (strong,nonatomic) AVAudioPlayer *tom4Player;
-@property (strong,nonatomic) AVAudioPlayer *tom5Player;
-@property (strong,nonatomic) AVAudioPlayer *tom6Player;
-
-@property (strong,nonatomic) AVAudioPlayer *clickNoise1Player;
-@property (strong,nonatomic) AVAudioPlayer *clickNoise2Player;
-@property (strong,nonatomic) AVAudioPlayer *clickNoise3Player;
-@property (strong,nonatomic) AVAudioPlayer *clickNoise4Player;
-@property (strong,nonatomic) AVAudioPlayer *clickNoise5Player;
-@property (strong,nonatomic) AVAudioPlayer *clickNoise6Player;
-
-
-
-// declaring reverb effects for drum sequencer
-// one effect for each drum track (one for the kick, one for the snare, etc.)
-
-@property (strong, nonatomic) AVAudioUnitReverb *kickReverb;
-@property (strong, nonatomic) AVAudioUnitReverb *snareReverb;
-@property (strong, nonatomic) AVAudioUnitReverb *hiHatReverb;
-@property (strong, nonatomic) AVAudioUnitReverb *tomReverb;
-@property (strong, nonatomic) AVAudioUnitReverb *cymbalReverb;
-@property (strong, nonatomic) AVAudioUnitReverb *clickNoiseReverb;
-
+@property (strong, nonatomic) IBOutlet UIButton *sequence1Button;
+- (IBAction)didSequence1ButtonPress:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *sequence2Button;
+- (IBAction)didSequence2ButtonPress:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *sequence3Button;
+- (IBAction)didSequence3ButtonPress:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *sequence4Button;
+- (IBAction)didSequence4ButtonPress:(UIButton *)sender;
 
 
 
