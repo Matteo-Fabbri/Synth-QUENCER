@@ -15,10 +15,16 @@
 /*
 
 The GUI is optimised for iPhone 6
-
+ Optimisation for all other devices an platforms are omitted for reasons of lacking of time
+ 
+Application optimised for iOS 11.1
+ 
+The lackness of a control over the playback speed each single audio object is also due to simple lacking of time, since it would be fairly easily to implement by following a similar method used in "Velocities" and "Drum sounds" view controller classes
+ 
+ 
 The simulator is often very slow to load the app, sometimes it needs to be relaunched
  
-I wrote this application using Xcode 9. For tips on opening it with an older Xcode version see:
+I wrote this application using Xcode 9. For tips on opening this project with an older Xcode version see:
 https://stackoverflow.com/questions/44772760/run-project-in-xcode-8-after-xcode-9
 
 Most of the application (Sequencer) is written in Objective C, while the Synthesiser is written in Swift by using AudioKit, an imported external 3rd party framework. I could not let Swift and Objective C interact with each other, so they just live together completely independently.
