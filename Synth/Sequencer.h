@@ -7,6 +7,38 @@
 //
 /* The main idea of the sequencer is taken from Dr. Craig Evans screencast https://minerva.leeds.ac.uk/bbcswebdav/pid-5341615-dt-content-rid-9710025_2/courses/201718_27046_ELEC2660/podcasts/Lab%206.mp4 */
 
+
+
+
+
+
+/*
+
+The GUI is optimised for iPhone 6
+
+The simulator is often very slow to load the app, sometimes it needs to be relaunched
+ 
+I wrote this application using Xcode 9. For tips on opening it with an older Xcode version see:
+https://stackoverflow.com/questions/44772760/run-project-in-xcode-8-after-xcode-9
+
+Most of the application (Sequencer) is written in Objective C, while the Synthesiser is written in Swift by using AudioKit, an imported external 3rd party framework. I could not let Swift and Objective C interact with each other, so they just live together completely independently.
+
+You should not have compatibility issues with the external framework (which is loaded into the project itself), but I provide a guide for installation of CocoaPods and AudioKit pod, just in case.
+
+CocoaPods:
+https://cocoapods.org/
+
+AudioKit:
+https://cocoapods.org/?q=audiokit
+
+ 
+I used http://appiconmaker.co/Home/Index/43962bc3-580e-434f-8ab0-f1a635efba7a to create correct-size icons
+ 
+ 
+*/
+
+
+
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
