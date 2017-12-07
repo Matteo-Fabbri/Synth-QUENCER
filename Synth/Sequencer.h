@@ -8,21 +8,21 @@
 /* The main idea of the sequencer is taken from Dr. Craig Evans screencast https://minerva.leeds.ac.uk/bbcswebdav/pid-5341615-dt-content-rid-9710025_2/courses/201718_27046_ELEC2660/podcasts/Lab%206.mp4 */
 
 
-
-
-
-
 /*
 
+ 
+ The application is conceived to be a live instrument as well as a compositional tool.
+ 
+ The Sequencer is meant to explore the rhythmic, dynamic and sonic possibilities of a 16 samples drum sequence, which can be “”sliced” in 4 different loops with settable start and end point. If the starting sample is higher than the end sample, the Sequencer will loop backwards. There are 10 possible dynamics and 3 possible sounds for each sample in each track.
+ The sequence of each of the four tracks can be inverted and moved right and left. The dynamics and sounds can be set individually for each sample, as well as randomised or reset to the default choice. The sounds can also be stepped up or down all together, useful when we want to have just one sound for all the samples in a track.
+ The synthesiser is meant to be played live and features 2 oscillators with settable octave, transposition interval, waveform, filter  and amplitude envelope parameters, as well as panpot and volume controls.
+ 
+
 The GUI is optimised for iPhone 6
- Optimisation for all other devices an platforms are omitted for reasons of lacking of time
  
 Application optimised for iOS 11.1
  
-The lackness of a control over the playback speed each single audio object is also due to simple lacking of time, since it would be fairly easily to implement by following a similar method used in "Velocities" and "Drum sounds" view controller classes
- 
- 
-The simulator is often very slow to load the app, sometimes it needs to be relaunched
+The simulator is often very slow in loading the app, sometimes it needs to be relaunched
  
 I wrote this application using Xcode 9. For tips on opening this project with an older Xcode version see:
 https://stackoverflow.com/questions/44772760/run-project-in-xcode-8-after-xcode-9
@@ -36,9 +36,19 @@ https://cocoapods.org/
 
 AudioKit:
 https://cocoapods.org/?q=audiokit
-
  
 I used http://appiconmaker.co/Home/Index/43962bc3-580e-434f-8ab0-f1a635efba7a to create correct-size icons
+
+ 
+ POSSIBLE IMPROVEMENTS:
+ 
+Optimisation for all other Apple devices an platforms are omitted for reasons of lacking of time
+ 
+ The lackness of a control over the playback speed of each single audio object is also due to simple lacking of time, since it would be fairly easily to implement by following a similar method used in "Velocities" and "Drum sounds" view controller classes
+ 
+ I wanted the Loop selection buttons (A,B,C,D in Sequencer view and "Play" buttons in Arranger view) to refresh automatically, which means if I select a particular loop in Sequencer view the correspondent button highlights also in Arranger view and viceversa. After some attempts, I found out that Key-Value Observing (Apple KVO, https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html ) may be the right solution. Again, unfortunately I do not have enough time to implement this.
+ 
+ 
  
  
 */
